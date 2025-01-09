@@ -13,5 +13,5 @@ export const fetchPhotosByQuery = (searchedQuery, page) => {
         per_page: 15,
     };
 
-    return axios.get('/api', { params: requestParams });
+    return axios.get('/api/', { params: requestParams });
 }
