@@ -29,12 +29,14 @@ const onSearchFormSubmit = async event => {
             });
             return;
         }
-    
+
+        searchFormEl.reset();
+
+        galleryEl.innerHTML = '';
+        loadMoreButton.classList.add('is-hidden');
         loaderEl.classList.remove('is-hidden');
     
         page = 1;
-
-        loadMoreButton.classList.add('is-hidden');
 
         const response = await fetchPhotosByQuery(inputValue, page)
          
